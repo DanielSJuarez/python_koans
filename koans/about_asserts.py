@@ -14,25 +14,27 @@ class AboutAsserts(Koan):
         #
         #   http://bit.ly/about_asserts
 
-        self.assertTrue(False) # This should be True
+        # self.assertTrue(False) # This should be True 
+        self.assertTrue(True) #This needs to be true as the item exsists and will not pass to the next statement as assert is a conditional statement returning true of false
 
     def test_assert_with_message(self):
         """
         Enlightenment may be more easily achieved with appropriate messages.
         """
-        self.assertTrue(False, "This should be True -- Please fix this")
+        # self.assertTrue(False, "This should be True -- Please fix this")
+        self.assertTrue(True, "This should be True -- Please fix this") #as stated above will not pass to the next statement 
 
     def test_fill_in_values(self):
         """
         Sometimes we will ask you to fill in the values
         """
-        self.assertEqual(__, 1 + 1)
+        self.assertEqual(2, 1 + 1) #this is a test assement of 1 + 1, and the value that equals true needs to be inputed, thus 2.
 
     def test_assert_equality(self):
         """
         To understand reality, we must compare our expectations against reality.
         """
-        expected_value = __
+        expected_value = 2 #set the expected value to make the self-assert true. This method uses a comparitor
         actual_value = 1 + 1
         self.assertTrue(expected_value == actual_value)
 
@@ -40,7 +42,7 @@ class AboutAsserts(Koan):
         """
         Some ways of asserting equality are better than others.
         """
-        expected_value = __
+        expected_value = 2 #set the expected value, but using better syntax
         actual_value = 1 + 1
 
         self.assertEqual(expected_value, actual_value)
@@ -51,7 +53,8 @@ class AboutAsserts(Koan):
         """
 
         # This throws an AssertionError exception
-        assert False
+        # assert False
+        assert True #set assert to true to pass the argument
 
     def test_that_sometimes_we_need_to_know_the_class_type(self):
         """
@@ -69,8 +72,8 @@ class AboutAsserts(Koan):
         # is just what it displays. The answer is simply str.
         #
         # See for yourself:
-
-        self.assertEqual(__, "navel".__class__) # It's str, not <type 'str'>
+        # self.assertEqual(__, "navel".__class__) # It's str, not <type 'str'>
+        self.assertEqual(str, "navel".__class__) # It's asking for the type of this class, which is string. So the input requested is the type of
 
         # Need an illustration? More reading can be found here:
         #

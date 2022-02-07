@@ -11,11 +11,11 @@ class AboutNone(Koan):
 
     def test_none_is_an_object(self):
         "Unlike NULL in a lot of languages"
-        self.assertEqual(__, isinstance(None, object))
+        self.assertEqual(True, isinstance(None, object)) #none is an object, it just represents the value of nothing
 
     def test_none_is_universal(self):
         "There is only one None"
-        self.assertEqual(____, None is None)
+        self.assertEqual(True, None is None) #is a universal value
 
     def test_what_exception_do_you_get_when_calling_nonexistent_methods(self):
         """
@@ -37,15 +37,15 @@ class AboutNone(Koan):
         #
         #     https://github.com/gregmalcolm/python_koans/wiki/Class-Attribute
 
-        self.assertEqual(__, ex2.__class__)
+        self.assertEqual('AttributeError', ex2.__class__.__name__) #you have to add the name attribute to test for the actually variable or error message
 
         # What message was attached to the exception?
         # (HINT: replace __ with part of the error message.)
-        self.assertRegex(ex2.args[0], __)
+        self.assertRegex(ex2.args[0], 'some_method_none_does_not_know_about()')
 
     def test_none_is_distinct(self):
         """
         None is distinct from other things which are False.
         """
-        self.assertEqual(__, None is not 0)
-        self.assertEqual(__, None is not False)
+        self.assertEqual(True, None is not 0)
+        self.assertEqual(True, None is not False) #is an object and not tied to a specific falsy value
