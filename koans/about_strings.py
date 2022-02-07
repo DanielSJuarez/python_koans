@@ -91,4 +91,4 @@ world!
         string = "\n"
         self.assertEqual('\n', string)
         self.assertEqual("""\n""", string)
-        self.assertEqual(1, len(string))  #lenght is one as the \n represents a new line
+        self.assertEqual(1, len(string))  #length is one as the \n represents a new line
