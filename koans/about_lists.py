@@ -82,7 +82,7 @@ class AboutLists(Koan):
         self.assertEqual('last', popped_value) #pop takes the element from the specified position off the list, but defaults to the end if no index is provided
         self.assertEqual([10,20,30,40], stack)
 
-        popped_value = stack.pop(1)
+        popped_value = stack.pop(1) 
         self.assertEqual(20, popped_value)
         self.assertEqual([10,30,40], stack)
 
