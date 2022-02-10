@@ -11,7 +11,7 @@ class Hamster:
     def name(self):
         return "Phil"
 
-class _SecretSquirrel:
+class _SecretSquirrel: #will return undefined as hidden by  _
     @property
     def name(self):
         return "Mr Anonymous"
