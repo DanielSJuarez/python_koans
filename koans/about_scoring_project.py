@@ -33,8 +33,32 @@ from runner.koan import *
 # Your goal is to write the score method.
 
 def score(dice):
-    # You need to write this method
-    pass
+    if len(dice) == 0:
+        return 0
+    
+    # generate a dict of how many time a value repeat itself
+    freq = {}
+    for item in dice:
+        if (item in freq):
+            freq[item] += 1
+        else:
+            freq[item] = 1
+
+    # value the list off
+    total_score = 0
+
+    for key, value in freq.items():
+        if key == 1:
+            total_score = (value // 3) * 1000
+            total_score += (value % 3) * 100
+        if key == 5:
+            total_score += (value // 3) * 100 * key
+            total_score += (value % 3) * 50
+        if key != 1 and key !=5:
+            total_score += (value // 3) * key * 100
+
+    return total_score
+
 
 class AboutScoringProject(Koan):
     def test_score_of_an_empty_list_is_zero(self):
